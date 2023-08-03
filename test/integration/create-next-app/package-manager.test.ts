@@ -121,7 +121,7 @@ it('should use Yarn as the package manager on supplying --use-yarn with example'
   } catch (_) {
     // install yarn if not available
     try {
-      await execa('corepack', ['prepare', '--activate', 'yarn@latest'])
+      await execa('corepack', ['prepare', '--activate', 'yarn@1'])
     } catch (_) {
       await execa('npm', ['i', '-g', 'yarn'])
     }
@@ -301,7 +301,7 @@ it('should infer yarn as the package manager', async () => {
   } catch (_) {
     // install yarn if not available
     try {
-      await execa('corepack', ['prepare', '--activate', 'yarn@latest'])
+      await execa('corepack', ['prepare', '--activate', 'yarn@1'])
     } catch (_) {
       await execa('npm', ['i', '-g', 'yarn'])
     }
@@ -345,7 +345,7 @@ it('should infer yarn as the package manager with example', async () => {
   } catch (_) {
     // install yarn if not available
     try {
-      await execa('corepack', ['prepare', '--activate', 'yarn@latest'])
+      await execa('corepack', ['prepare', '--activate', 'yarn@1'])
     } catch (_) {
       await execa('npm', ['i', '-g', 'yarn'])
     }
